@@ -11,14 +11,9 @@
                     <!-- Colonne 1: Identité de marque -->
                     <div class="footer-col footer-col--brand">
                         <div class="footer-logo">
-                            <span class="logo-mark" aria-hidden="true">
-                                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-                                    <rect width="32" height="32" rx="8" fill="#1E293B"/>
-                                    <path d="M7 10L13 22L16 16L19 22L25 10H21L16 19.5L11 10H7Z" fill="white"/>
-                                    <circle cx="25" cy="9" r="2.5" fill="#F97316"/>
-                                </svg>
-                            </span>
-                            <span class="footer-brand-name">WIKY<span class="brand-dot">.</span>HOLDING</span>
+                            <a href="<?= e(url()) ?>" class="footer-logo-link" aria-label="WIKY HOLDING - Accueil">
+                                <img src="<?= e(ASSETS_URL) ?>/images/logo-wiky-holding-white.png" alt="WIKY HOLDING" class="footer-logo-img">
+                            </a>
                         </div>
                         <p class="footer-desc">
                             Wiky Holding est votre agence conseil 360° à Abidjan pour la valorisation de votre image de marque, l’animation de vos communautés et la production de contenus audiovisuels percutants en Studio 4K.
@@ -97,13 +92,23 @@
                     <p class="footer-meta">
                         Projet Modernisé BTS Informatique Développeur d’Application • Développé en PHP MVP & PDO
                     </p>
-                    <a href="#site-header" class="btn-back-to-top" id="back-to-top" aria-label="Remonter en haut de page">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                    </a>
                 </div>
             </div>
         </footer>
     </div><!-- /.site-wrapper -->
+
+    <!-- Bouton flottant remonter en haut sophistiqué avec indicateur circulaire de scroll -->
+    <button type="button" class="floating-back-to-top" id="floating-back-to-top" aria-label="Remonter en haut de page" title="Remonter en haut">
+        <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+            <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.18)" stroke-width="3" fill="transparent" r="19" cx="23" cy="23" />
+            <circle class="progress-ring__circle" id="scroll-progress-circle" stroke="var(--primary-color, #F97316)" stroke-width="3" stroke-linecap="round" fill="transparent" r="19" cx="23" cy="23" />
+        </svg>
+        <span class="floating-arrow" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </span>
+    </button>
 
     <!-- Scripts Javascript optimisés et sans dépendances lourdes -->
     <script src="<?= e(ASSETS_URL) ?>/js/main.js"></script>

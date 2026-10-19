@@ -13,8 +13,8 @@ if (!defined('APP_NAME')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title><?= e($pageTitle ?? APP_NAME . ' • Agence Conseil 360°, Branding & Studio Podcast à Abidjan') ?></title>
-    <meta name="description" content="Wiky Holding : Agence Conseil 360° à Abidjan. Spécialiste en Community Management, modération 7j/7, création de logos vectoriels, production en Studio Podcast 4K et stratégies de marque.">
+    <title><?= e($pageTitle ?? APP_NAME . ' • Branding, Digital & Studio Podcast 4K à Abidjan') ?></title>
+    <meta name="description" content="Wiky Holding : Agence créative à Abidjan. Spécialiste en Community Management, modération 7j/7, création de logos vectoriels, production en Studio Podcast 4K et stratégies de marque.">
     <meta name="author" content="Wiky Holding">
     <meta name="robots" content="index, follow">
 
@@ -32,8 +32,26 @@ if (!defined('APP_NAME')) {
     <!-- Feuille de styles principale (Design Tokens & Styles d'Élite) -->
     <link rel="stylesheet" href="<?= e(ASSETS_URL) ?>/css/style.css">
 
-    <!-- Favicon SVG élégant -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234F46E5'/><path d='M25 35L42 70L50 54L58 70L75 35H63L50 60L37 35Z' fill='%23FFFFFF'/><circle cx='76' cy='35' r='5' fill='%23F97316'/></svg>">
+    <!-- Favicon SVG officiel Wiky Holding -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230F172A'/><text x='50' y='66' font-size='44' font-weight='900' font-family='sans-serif' text-anchor='middle' fill='%23FA4D09'>W</text></svg>">
+
+    <!-- Initialisation immédiate du thème pour éviter tout FOUC (flash blanc) -->
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('wiky_theme') || 'light';
+                var savedAccent = localStorage.getItem('wiky_accent') || 'orange';
+                var customColor = localStorage.getItem('wiky_custom_color') || localStorage.getItem('wiky_custom_accent');
+                document.documentElement.setAttribute('data-theme', savedTheme);
+                document.documentElement.setAttribute('data-accent', savedAccent);
+                if (savedAccent === 'custom' && customColor) {
+                    document.documentElement.style.setProperty('--primary-color', customColor);
+                    document.documentElement.style.setProperty('--primary-hover', customColor);
+                    document.documentElement.style.setProperty('--primary-subtle', customColor + '22');
+                }
+            } catch(e) {}
+        })();
+    </script>
 </head>
 <body class="page-<?= e($currentPage ?? 'default') ?>">
     <div class="site-wrapper">

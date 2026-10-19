@@ -50,9 +50,11 @@ require dirname(__DIR__) . '/layout/header.php';
                          alt="Production Audiovisuelle et Studio Podcast 4K de Wiky Holding à Abidjan" 
                          class="showcase-photo"
                          width="720" height="405" loading="eager">
-                    <div class="showcase-overlay-badge">
-                        <span class="live-rec-dot"></span>
-                        <span>Studio 4K • Plateau & Palmeraie</span>
+                    <!-- Logo Central Révélé avec Zoom Fluide -->
+                    <div class="showcase-logo-reveal" aria-hidden="true">
+                        <div class="reveal-badge">
+                            <img src="<?= e(ASSETS_URL) ?>/images/logo-wiky-holding-white.png" alt="Wiky Holding" class="reveal-logo-img">
+                        </div>
                     </div>
                 </div>
 

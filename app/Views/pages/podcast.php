@@ -60,18 +60,73 @@ require dirname(__DIR__) . '/layout/header.php';
             </div>
 
             <div class="story-card">
-                <div class="studio-badge-card">
-                    <div class="studio-status-tag">
-                        <span class="live-dot"></span>
-                        <span>Studio Wiky Holding • Prêt à Enregistrer</span>
+                <div class="studio-showcase-card">
+                    <!-- Visuel réel immersif du studio & badges live -->
+                    <div class="studio-showcase-media">
+                        <img src="<?= e(ASSETS_URL) ?>/images/studio-podcast-abidjan.jpg" 
+                             alt="Plateau Studio Podcast 4K et Régie Broadcast de Wiky Holding à Abidjan" 
+                             class="studio-showcase-img"
+                             width="640" height="360" loading="lazy">
+                        <div class="studio-media-overlay">
+                            <div class="studio-status-tag">
+                                <span class="live-dot"></span>
+                                <span>Studio Wiky Holding • Prêt à Enregistrer</span>
+                            </div>
+                            <div class="studio-tech-pill">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                <span>Plateau 4K & Régie Pro</span>
+                            </div>
+                        </div>
+                        <!-- Égaliseur sonore animé broadcast -->
+                        <div class="studio-soundwave" aria-hidden="true" title="Son Broadcast Haute Fidélité">
+                            <span class="wave-col"></span>
+                            <span class="wave-col"></span>
+                            <span class="wave-col"></span>
+                            <span class="wave-col"></span>
+                            <span class="wave-col"></span>
+                            <span class="wave-col"></span>
+                            <span class="wave-col"></span>
+                        </div>
                     </div>
-                    <div class="studio-visual-art">
-                        <svg width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.5" class="mic-art"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-                    </div>
-                    <div class="studio-quick-pricing">
-                        <span class="pricing-badge">Tarif Session Simple</span>
-                        <div class="price-val">80.000 FCFA <span class="price-unit">/ séance</span></div>
-                        <p class="price-includes">Comprend 1h30 de studio, prise de son broadcast et fichiers audio nettoyés.</p>
+
+                    <!-- Corps de l'offre studio & tarification transparente -->
+                    <div class="studio-showcase-body">
+                        <div class="studio-price-header">
+                            <div class="studio-price-meta">
+                                <span class="pricing-badge">Tarif Session Simple</span>
+                                <span class="studio-badge-guarantee">Clé en main</span>
+                            </div>
+                            <div class="price-val">
+                                80.000 FCFA <span class="price-unit">/ séance</span>
+                            </div>
+                        </div>
+
+                        <p class="price-includes">
+                            Comprend <strong>1h30 de studio insonorisé</strong>, ingénieur du son dédié, prise de son broadcast et fichiers audio & vidéo nettoyés livrés sous 48h.
+                        </p>
+
+                        <ul class="studio-perks-list">
+                            <li>
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Jusqu’à 4 micros broadcast Shure simultanés</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Régie 4K multi-caméras & éclairage cinématographique</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Export multipistes bruts + master audio équilibré</span>
+                            </li>
+                        </ul>
+
+                        <div class="studio-card-action">
+                            <a href="<?= e(url('contact')) ?>" class="btn btn--primary btn--full">
+                                <span>Réserver ma session de tournage</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                            <span class="studio-cta-note">Disponibilités 6j/7 sur réservation • Cocody & Plateau</span>
+                        </div>
                     </div>
                 </div>
             </div>
