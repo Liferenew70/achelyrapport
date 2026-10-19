@@ -10,8 +10,8 @@ define('APP_TAGLINE', 'Agence Conseil 360° • Community Management, Branding, 
 define('COMPANY_NAME', 'Wiky Holding');
 define('COMPANY_LEGAL', 'Wiky Holding SARL');
 define('COMPANY_ADDRESS', 'Abidjan, Cocody Riviera Palmeraie & Plateau, Côte d’Ivoire');
-define('COMPANY_PHONE', '+225 07 00 00 00 00 / +225 05 00 00 00 00');
-define('COMPANY_EMAIL', 'contact@wikyholding.com');
+define('COMPANY_PHONE', '+225 07 88 83 70 24 / +225 27 24 42 42 00');
+define('COMPANY_EMAIL', 'Wikytechnologieci@gmail.com');
 define('COMPANY_HOURS', 'Lun - Ven : 08h30 - 18h30 | Sam : 09h00 - 14h00');
 
 // Détection de l'URL de base dynamique (compatible InfinityFree, XAMPP, PHP CLI)
