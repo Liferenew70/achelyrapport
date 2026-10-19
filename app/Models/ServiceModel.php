@@ -4,7 +4,7 @@ namespace App\Models;
 class ServiceModel
 {
     /**
-     * Retourne la liste exhaustive des prestations de Wiky Agency
+     * Retourne la liste exhaustive des prestations de Wiky Holding
      */
     public static function getAll(): array
     {

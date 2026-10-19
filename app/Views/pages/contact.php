@@ -8,7 +8,7 @@ require dirname(__DIR__) . '/layout/header.php';
 <section class="page-hero">
     <div class="container text-center">
         <div class="badge">Échangeons Directement</div>
-        <h1 class="page-title">Contactez l'Équipe Wiky Agency</h1>
+        <h1 class="page-title">Contactez <br> Wiky Holding</h1>
         <p class="page-lead max-w-reading">
             Une question sur nos forfaits de Community Management, une demande de création de logo ou une séance de studio podcast ? Nous vous répondons sous 24h.
         </p>
