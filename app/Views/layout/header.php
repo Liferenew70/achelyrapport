@@ -13,14 +13,14 @@ if (!defined('APP_NAME')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title><?= e($pageTitle ?? APP_NAME . ' • Agence de Communication Digitale & Branding') ?></title>
-    <meta name="description" content="Digital Agency Wiky (Wiky Holding) : Spécialiste à Abidjan en Community Management, modération de commentaires, création de logos, identité visuelle, studio podcast et accompagnement création d’entreprise.">
-    <meta name="author" content="Digital Agency Wiky">
+    <title><?= e($pageTitle ?? APP_NAME . ' • Agence Conseil 360°, Branding & Studio Podcast à Abidjan') ?></title>
+    <meta name="description" content="Wiky Holding : Agence Conseil 360° à Abidjan. Spécialiste en Community Management, modération 7j/7, création de logos vectoriels, production en Studio Podcast 4K et stratégies de marque.">
+    <meta name="author" content="Wiky Holding">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Réseaux Sociaux -->
     <meta property="og:title" content="<?= e($pageTitle ?? APP_NAME) ?>">
-    <meta property="og:description" content="Sublimez votre marque et dominez vos réseaux avec Digital Agency Wiky.">
+    <meta property="og:description" content="Sublimez votre marque et dominez vos réseaux avec Wiky Holding à Abidjan.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= e(BASE_URL) ?>">
 

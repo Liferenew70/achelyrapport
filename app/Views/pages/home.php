@@ -43,41 +43,38 @@ require dirname(__DIR__) . '/layout/header.php';
         </div>
 
         <div class="hero-visual">
-            <div class="hero-card-stack">
-                <div class="hero-preview-card card-main">
-                    <div class="card-header-status">
-                        <span class="status-indicator"></span>
-                        <span class="status-label">Studio & CM En Direct</span>
-                    </div>
-                    <div class="card-metric">
-                        <span class="metric-val">+240%</span>
-                        <span class="metric-desc">Taux d'engagement moyen généré</span>
-                    </div>
-                    <div class="card-tags-cloud">
-                        <span class="tag">#CommunityManagement</span>
-                        <span class="tag">#BrandingPro</span>
-                        <span class="tag">#PodcastStudio</span>
-                        <span class="tag">#Abidjan</span>
+            <div class="hero-showcase-container">
+                <!-- Image principale réelle du Studio & Production de Wiky Holding -->
+                <div class="hero-showcase-main">
+                    <img src="<?= e(ASSETS_URL) ?>/images/studio-podcast-abidjan.jpg" 
+                         alt="Production Audiovisuelle et Studio Podcast 4K de Wiky Holding à Abidjan" 
+                         class="showcase-photo"
+                         width="720" height="405" loading="eager">
+                    <div class="showcase-overlay-badge">
+                        <span class="live-rec-dot"></span>
+                        <span>Studio 4K • Plateau & Palmeraie</span>
                     </div>
                 </div>
 
-                <div class="hero-floating-badge badge-top-right">
-                    <div class="floating-icon">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <!-- Carte flottante 1 : Modération 7j/7 & Réactivité -->
+                <div class="hero-kpi-card kpi-card--top">
+                    <div class="kpi-icon-wrap kpi-icon--emerald">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     </div>
-                    <div>
-                        <strong>Modération 7j/7</strong>
-                        <span>Réponses < 15 min</span>
+                    <div class="kpi-text">
+                        <strong>Modération Réactive 7j/7</strong>
+                        <span>Réponses en &lt; 15 minutes</span>
                     </div>
                 </div>
 
-                <div class="hero-floating-badge badge-bottom-left">
-                    <div class="floating-icon">
-                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                <!-- Carte flottante 2 : Identité & Logos vectoriels -->
+                <div class="hero-kpi-card kpi-card--bottom">
+                    <div class="kpi-icon-wrap kpi-icon--amber">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
                     </div>
-                    <div>
-                        <strong>Studio Podcast 4K</strong>
-                        <span>Sonorisé & Équipé</span>
+                    <div class="kpi-text">
+                        <strong>Identité & Logos Vectoriels</strong>
+                        <span>Chartes graphiques sur-mesure</span>
                     </div>
                 </div>
             </div>
@@ -185,10 +182,10 @@ require dirname(__DIR__) . '/layout/header.php';
             <?php endforeach; ?>
         </div>
 
-        <div class="text-center mt-12">
-            <a href="<?= e(url('portfolio')) ?>" class="btn btn--primary">
+        <div class="portfolio-action-wrap">
+            <a href="<?= e(url('portfolio')) ?>" class="btn btn--primary btn--lg">
                 <span>Voir tout le portfolio</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
         </div>
     </div>
@@ -237,7 +234,7 @@ require dirname(__DIR__) . '/layout/header.php';
     <div class="container">
         <div class="section-header">
             <div class="badge">Avis Clients</div>
-            <h2 class="section-title">Ils ont choisi Digital Agency Wiky</h2>
+            <h2 class="section-title">Ils ont choisi Wiky Holding</h2>
             <p class="section-lead">Découvrez les retours de nos clients partenaires qui ont transformé leur image et développé leur clientèle avec nous.</p>
         </div>
 
@@ -274,8 +271,9 @@ require dirname(__DIR__) . '/layout/header.php';
                 <p class="cta-lead">Échangeons dès aujourd’hui sur vos ambitions. Obtenez une estimation claire et chiffrée sous 24 heures.</p>
             </div>
             <div class="cta-buttons">
-                <a href="<?= e(url('devis')) ?>" class="btn btn--white btn--lg">
+                <a href="<?= e(url('devis')) ?>" class="btn btn--cta-quote btn--lg">
                     <span>Demander un devis personnalisé</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
                 <a href="<?= e(url('contact')) ?>" class="btn btn--outline-white btn--lg">
                     <span>Prendre rendez-vous</span>

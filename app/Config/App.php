@@ -5,10 +5,10 @@
  */
 
 // Nom et informations de l'entreprise
-define('APP_NAME', 'Digital Agency Wiky');
-define('APP_TAGLINE', 'Agence 360° • Community Management, Branding, Studio Podcast & Stratégie');
+define('APP_NAME', 'Wiky Holding');
+define('APP_TAGLINE', 'Agence Conseil 360° • Community Management, Branding, Studio Podcast & Stratégie');
 define('COMPANY_NAME', 'Wiky Holding');
-define('COMPANY_LEGAL', 'Digital Agency Wiky / Wiky Holding SARL');
+define('COMPANY_LEGAL', 'Wiky Holding SARL');
 define('COMPANY_ADDRESS', 'Abidjan, Cocody Riviera Palmeraie & Plateau, Côte d’Ivoire');
 define('COMPANY_PHONE', '+225 07 00 00 00 00 / +225 05 00 00 00 00');
 define('COMPANY_EMAIL', 'contact@wikyholding.com');

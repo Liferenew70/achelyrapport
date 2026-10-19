@@ -13,15 +13,15 @@
                         <div class="footer-logo">
                             <span class="logo-mark" aria-hidden="true">
                                 <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-                                    <rect width="32" height="32" rx="8" fill="#4F46E5"/>
+                                    <rect width="32" height="32" rx="8" fill="#1E293B"/>
                                     <path d="M7 10L13 22L16 16L19 22L25 10H21L16 19.5L11 10H7Z" fill="white"/>
                                     <circle cx="25" cy="9" r="2.5" fill="#F97316"/>
                                 </svg>
                             </span>
-                            <span class="footer-brand-name">WIKY<span class="brand-dot">.</span>AGENCY</span>
+                            <span class="footer-brand-name">WIKY<span class="brand-dot">.</span>HOLDING</span>
                         </div>
                         <p class="footer-desc">
-                            Digital Agency Wiky (Wiky Holding) est votre partenaire 360° à Abidjan pour la valorisation de votre image de marque, l’animation de vos communautés et la production de contenus audiovisuels percutants.
+                            Wiky Holding est votre agence conseil 360° à Abidjan pour la valorisation de votre image de marque, l’animation de vos communautés et la production de contenus audiovisuels percutants en Studio 4K.
                         </p>
                         <div class="footer-socials">
                             <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">

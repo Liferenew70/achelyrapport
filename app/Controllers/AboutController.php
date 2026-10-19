@@ -51,7 +51,7 @@ class AboutController
             ]
         ];
 
-        $pageTitle = "À Propos • Notre Histoire, Vision & Équipe | Digital Agency Wiky";
+        $pageTitle = "À Propos • Notre Histoire, Vision & Équipe | Wiky Holding";
         $currentPage = 'about';
 
         require dirname(__DIR__) . '/Views/pages/about.php';

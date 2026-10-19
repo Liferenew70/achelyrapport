@@ -34,7 +34,7 @@ require dirname(__DIR__) . '/layout/header.php';
                 <span class="badge">L'expérience studio</span>
                 <h2 class="section-title">Un espace pensé pour les créateurs & les entreprises</h2>
                 <p>
-                    Le format audio et vidéo conversationnelle est aujourd’hui l’arme de communication la plus engageante. Que vous soyez chef d’entreprise, consultant, influenceur ou créateur, <strong>Digital Agency Wiky</strong> met à votre disposition son studio professionnel situé à Abidjan.
+                    Le format audio et vidéo conversationnelle est aujourd’hui l’arme de communication la plus engageante. Que vous soyez chef d’entreprise, consultant, influenceur ou créateur, <strong>Wiky Holding</strong> met à votre disposition son studio professionnel situé à Abidjan.
                 </p>
                 <p>
                     Vous n'avez qu'à venir avec votre sujet ou vos invités : notre équipe technique (ingénieur du son, cadreur et notre directrice de production) s'occupe de la mise en place, des niveaux sonores, des lumières et de l’enregistrement haute fidélité.
@@ -63,7 +63,7 @@ require dirname(__DIR__) . '/layout/header.php';
                 <div class="studio-badge-card">
                     <div class="studio-status-tag">
                         <span class="live-dot"></span>
-                        <span>Studio Wiky • Prêt à Enregistrer</span>
+                        <span>Studio Wiky Holding • Prêt à Enregistrer</span>
                     </div>
                     <div class="studio-visual-art">
                         <svg width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.5" class="mic-art"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>

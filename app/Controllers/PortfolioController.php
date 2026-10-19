@@ -18,7 +18,7 @@ class PortfolioController
             'startup' => 'Création d’Entreprise'
         ];
 
-        $pageTitle = "Réalisations & Portfolio • Digital Agency Wiky";
+        $pageTitle = "Réalisations & Portfolio • Wiky Holding";
         $currentPage = 'portfolio';
 
         require dirname(__DIR__) . '/Views/pages/portfolio.php';

@@ -18,7 +18,7 @@ class ContactController
         $flash = $_SESSION['flash'] ?? null;
         unset($_SESSION['flash']);
 
-        $pageTitle = "Contact & Rendez-vous • Digital Agency Wiky à Abidjan";
+        $pageTitle = "Contact & Rendez-vous • Wiky Holding à Abidjan";
         $currentPage = 'contact';
 
         require dirname(__DIR__) . '/Views/pages/contact.php';

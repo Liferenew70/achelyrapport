@@ -71,7 +71,7 @@ require dirname(__DIR__) . '/layout/header.php';
                                 <?php endif; ?>
                             </div>
                             <span class="media-title"><?= e($srv['title']) ?></span>
-                            <span class="media-badge">Expertise Wiky 360°</span>
+                            <span class="media-badge">Expertise Wiky Holding 360°</span>
                         </div>
                     </div>
                 </div>

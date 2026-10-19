@@ -17,7 +17,7 @@ class DevisController
         $flash = $_SESSION['flash'] ?? null;
         unset($_SESSION['flash']);
 
-        $pageTitle = "Demande de Devis Gratuit • Estimez Votre Projet | Digital Agency Wiky";
+        $pageTitle = "Demande de Devis Gratuit • Estimez Votre Projet | Wiky Holding";
         $currentPage = 'devis';
 
         require dirname(__DIR__) . '/Views/pages/devis.php';

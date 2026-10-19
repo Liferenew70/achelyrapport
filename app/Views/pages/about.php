@@ -10,7 +10,7 @@ require dirname(__DIR__) . '/layout/header.php';
         <div class="badge">Notre Histoire & Valeurs</div>
         <h1 class="page-title">L’agence créative au service de la croissance des entreprises</h1>
         <p class="page-lead max-w-reading">
-            Digital Agency Wiky (Wiky Holding) est née d’une ambition simple : doter les entreprises, PME et créateurs d’Abidjan d’une communication visuelle et digitale à la hauteur des plus grands standards internationaux.
+            Wiky Holding est née d’une ambition simple : doter les entreprises, PME et créateurs d’Abidjan d’une communication visuelle et digitale à la hauteur des plus grands standards internationaux.
         </p>
     </div>
 </section>
@@ -25,7 +25,7 @@ require dirname(__DIR__) . '/layout/header.php';
                 <span class="badge">Wiky Holding en quelques mots</span>
                 <h2 class="section-title">Une vision 360° pour amplifier votre impact</h2>
                 <p>
-                    Basée à Abidjan, <strong>Digital Agency Wiky</strong> est une structure agile et moderne réunissant l’ensemble des corps de métiers de la communication contemporaine : stratégie de marque, community management réactif, graphisme de haut vol et production audiovisuelle en studio dédié.
+                    Basée à Abidjan, <strong>Wiky Holding</strong> est une agence conseil 360° agile et moderne réunissant l’ensemble des corps de métiers de la communication contemporaine : stratégie de marque, community management réactif, graphisme de haut vol et production audiovisuelle en studio dédié.
                 </p>
                 <p>
                     Face à l'évolution rapide des usages numériques en Côte d'Ivoire et dans la sous-région, nous avons fait le choix de la rigueur : chaque projet est piloté de bout en bout par un chargé de projets dédié, garantissant ainsi un respect strict des délais et une fluidité permanente avec vos équipes.
@@ -57,7 +57,7 @@ require dirname(__DIR__) . '/layout/header.php';
                     </p>
                     <div class="manifesto-footer">
                         <div class="signature-name">La Direction Générale</div>
-                        <div class="signature-role">Digital Agency Wiky • Wiky Holding</div>
+                        <div class="signature-role">Wiky Holding • Abidjan</div>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@ require dirname(__DIR__) . '/layout/header.php';
     <div class="container">
         <div class="section-header">
             <div class="badge">Organisation Interne</div>
-            <h2 class="section-title">Les 4 Pôles d’Excellence de Digital Agency Wiky</h2>
+            <h2 class="section-title">Les 4 Pôles d’Excellence de Wiky Holding</h2>
             <p class="section-lead">Une structure claire où chaque département collabore en synergie pour garantir des livrables de haute précision.</p>
         </div>
 

@@ -7,7 +7,7 @@ $currentPage = $currentPage ?? 'home';
 <header class="site-header" id="site-header">
     <div class="container header-container">
         <!-- Logo de l'Agence -->
-        <a href="<?= e(url()) ?>" class="brand-logo" aria-label="Digital Agency Wiky - Accueil">
+        <a href="<?= e(url()) ?>" class="brand-logo" aria-label="Wiky Holding - Accueil">
             <span class="logo-mark" aria-hidden="true">
                 <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
                     <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
@@ -15,15 +15,15 @@ $currentPage = $currentPage ?? 'home';
                     <circle cx="25" cy="9" r="2.5" fill="#F97316"/>
                     <defs>
                         <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#4F46E5"/>
-                            <stop offset="1" stop-color="#7C3AED"/>
+                            <stop stop-color="#1E293B"/>
+                            <stop offset="1" stop-color="#0F172A"/>
                         </linearGradient>
                     </defs>
                 </svg>
             </span>
             <div class="logo-text">
-                <span class="brand-name">WIKY<span class="brand-dot">.</span>AGENCY</span>
-                <span class="brand-sub">Wiky Holding • Abidjan</span>
+                <span class="brand-name">WIKY<span class="brand-dot">.</span>HOLDING</span>
+                <span class="brand-sub">Agence Conseil 360° • Abidjan</span>
             </div>
         </a>
 

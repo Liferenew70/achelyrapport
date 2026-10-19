@@ -20,18 +20,18 @@
     --font-size-3xl: 3.157rem;  /* ~50px */
     --font-size-4xl: 4.209rem;  /* ~67px */
 
-    /* COULEUR PRIMAIRE : Indigo Moderne (Créativité, Technologie, Confiance) */
-    --color-primary-50: #EEF2FF;
-    --color-primary-100: #E0E7FF;
-    --color-primary-200: #C7D2FE;
-    --color-primary-300: #A5B4FC;
-    --color-primary-400: #818CF8;
-    --color-primary-500: #6366F1;
-    --color-primary-600: #4F46E5; /* Référence CTA interactif */
-    --color-primary-700: #4338CA;
-    --color-primary-800: #3730A3;
-    --color-primary-900: #312E81;
-    --color-primary-950: #1E1B4B;
+    /* COULEUR PRIMAIRE : Bleu Royal & Marine d'Agence & Holding (Prestige, Confiance, Rigueur) */
+    --color-primary-50: #EFF6FF;
+    --color-primary-100: #DBEAFE;
+    --color-primary-200: #BFDBFE;
+    --color-primary-300: #93C5FD;
+    --color-primary-400: #60A5FA;
+    --color-primary-500: #3B82F6;
+    --color-primary-600: #2563EB; /* Référence CTA interactif */
+    --color-primary-700: #1D4ED8;
+    --color-primary-800: #1E40AF;
+    --color-primary-900: #1E3A8A;
+    --color-primary-950: #0F172A;
 
     /* COULEUR D'ACCENT : Corail / Tangerine (Énergie, Action, Conversion 10%) */
     --color-accent-50: #FFF7ED;
@@ -202,7 +202,7 @@ p:last-child {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary-600) 0%, #9333EA 100%);
+    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -271,6 +271,20 @@ p:last-child {
     .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Espacements Utilitaires */
+.mt-2 { margin-top: var(--space-2); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mt-10 { margin-top: var(--space-10); }
+.mt-12 { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.mt-16 { margin-top: clamp(3.5rem, 6vw, 5.5rem); }
+
+.portfolio-action-wrap {
+    margin-top: clamp(2.5rem, 5vw, 4.5rem);
+    text-align: center;
+}
+
 /* --------------------------------------------------------------------------
    5. COMPOSANTS : BADGES & BOUTONS
    -------------------------------------------------------------------------- */
@@ -279,9 +293,9 @@ p:last-child {
     align-items: center;
     gap: var(--space-2);
     padding: 0.35rem 0.85rem;
-    background-color: var(--color-primary-50);
-    color: var(--color-primary-700);
-    border: 1px solid var(--color-primary-200);
+    background-color: var(--color-neutral-100);
+    color: var(--color-neutral-800);
+    border: 1px solid var(--color-neutral-300);
     border-radius: var(--radius-pill);
     font-size: var(--font-size-xs);
     font-weight: 600;
@@ -294,6 +308,22 @@ p:last-child {
     height: 6px;
     border-radius: 50%;
     background-color: var(--color-accent-500);
+}
+
+.hero-badge {
+    background-color: #FFFFFF;
+    color: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-300);
+    box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.06);
+    padding: 0.45rem 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.hero-badge .badge-dot {
+    background-color: var(--color-accent-500);
+    width: 7px;
+    height: 7px;
 }
 
 .btn {
@@ -324,12 +354,12 @@ p:last-child {
 .btn--primary {
     background-color: var(--color-primary-600);
     color: var(--color-neutral-0);
-    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
 .btn--primary:hover {
     background-color: var(--color-primary-700);
-    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
     transform: translateY(-1px);
 }
 
@@ -356,15 +386,21 @@ p:last-child {
     background-color: var(--color-primary-50);
 }
 
-.btn--white {
+.btn--white,
+.btn--cta-quote {
     background-color: #FFFFFF;
     color: var(--color-neutral-900);
-    box-shadow: var(--shadow-md);
+    font-weight: 700;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.btn--white:hover {
-    background-color: var(--color-neutral-50);
-    transform: translateY(-1px);
+.btn--white:hover,
+.btn--cta-quote:hover {
+    background-color: #F8FAFC;
+    color: var(--color-neutral-900);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18);
 }
 
 .btn--outline-white {
@@ -674,115 +710,141 @@ p:last-child {
     color: var(--color-neutral-600);
 }
 
-/* Hero Card Stack Visual */
-.hero-card-stack {
+/* --------------------------------------------------------------------------
+   Hero Showcase Visual (Authentique, Editorial, Réel Studio & Agence)
+   -------------------------------------------------------------------------- */
+.hero-showcase-container {
     position: relative;
-    max-width: 480px;
+    max-width: 540px;
     margin: 0 auto;
 }
 
-.hero-preview-card {
-    background: linear-gradient(145deg, #1E1B4B 0%, #0F172A 100%);
+.hero-showcase-main {
+    position: relative;
     border-radius: var(--radius-xl);
-    padding: var(--space-8);
+    overflow: hidden;
+    background-color: var(--color-neutral-900);
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+    border: 1px solid var(--color-neutral-200);
+}
+
+.hero-showcase-main .showcase-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.hero-showcase-main:hover .showcase-photo {
+    transform: scale(1.02);
+}
+
+.showcase-overlay-badge {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: #FFFFFF;
-    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.card-header-status {
-    display: flex;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: inline-flex;
     align-items: center;
-    gap: var(--space-2);
-    font-size: 0.85rem;
-    color: #A5B4FC;
-    margin-bottom: var(--space-6);
+    gap: 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.status-indicator {
+.live-rec-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: var(--color-success);
-    box-shadow: 0 0 10px var(--color-success);
+    background-color: #EF4444;
+    animation: recPulse 2s infinite ease-in-out;
 }
 
-.card-metric {
-    margin-bottom: var(--space-6);
+@keyframes recPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
 }
 
-.metric-val {
-    display: block;
-    font-size: 3rem;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    line-height: 1;
-    color: #38BDF8;
-}
-
-.metric-desc {
-    font-size: 0.95rem;
-    color: #E2E8F0;
-}
-
-.card-tags-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-}
-
-.card-tags-cloud .tag {
-    background: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 0.25rem 0.65rem;
-    border-radius: var(--radius-pill);
-    font-size: 0.75rem;
-}
-
-.hero-floating-badge {
+.hero-kpi-card {
     position: absolute;
     background-color: #FFFFFF;
     color: var(--color-neutral-900);
     padding: var(--space-3) var(--space-4);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.14), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
     border: 1px solid var(--color-neutral-200);
     display: flex;
     align-items: center;
     gap: var(--space-3);
     font-size: 0.85rem;
-    line-height: 1.2;
+    line-height: 1.25;
+    z-index: 2;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.hero-floating-badge strong {
+.hero-kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 32px -8px rgba(15, 23, 42, 0.18);
+}
+
+.hero-kpi-card strong {
     display: block;
+    font-size: 0.9rem;
+    color: var(--color-neutral-900);
 }
 
-.hero-floating-badge span {
+.hero-kpi-card span {
     color: var(--color-neutral-500);
-    font-size: 0.75rem;
+    font-size: 0.76rem;
 }
 
-.floating-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--color-primary-50);
-    color: var(--color-primary-600);
+.kpi-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
-.badge-top-right {
-    top: -20px;
-    right: -10px;
+.kpi-icon--emerald {
+    background-color: #ECFDF5;
+    color: #059669;
 }
 
-.badge-bottom-left {
-    bottom: -20px;
-    left: -10px;
+.kpi-icon--amber {
+    background-color: #FFF7ED;
+    color: #D97706;
+}
+
+.kpi-card--top {
+    top: -18px;
+    right: -16px;
+}
+
+.kpi-card--bottom {
+    bottom: -18px;
+    left: -16px;
+}
+
+@media (max-width: 640px) {
+    .kpi-card--top {
+        position: static;
+        margin-top: var(--space-3);
+    }
+    .kpi-card--bottom {
+        position: static;
+        margin-top: var(--space-3);
+    }
 }
 
 /* --------------------------------------------------------------------------
@@ -1011,10 +1073,10 @@ p:last-child {
     box-shadow: var(--shadow-lg);
 }
 
-.bg-grad-community-management { background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%); }
-.bg-grad-branding-logos { background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%); }
-.bg-grad-studio-podcast { background: linear-gradient(135deg, #1E1B4B 0%, #F43F5E 100%); }
-.bg-grad-creation-entreprise { background: linear-gradient(135deg, #0F766E 0%, #3B82F6 100%); }
+.bg-grad-community-management { background: linear-gradient(135deg, #0284C7 0%, #0F172A 100%); }
+.bg-grad-branding-logos { background: linear-gradient(135deg, #1E293B 0%, #2563EB 100%); }
+.bg-grad-studio-podcast { background: linear-gradient(135deg, #0F172A 0%, #EA580C 100%); }
+.bg-grad-creation-entreprise { background: linear-gradient(135deg, #0F766E 0%, #2563EB 100%); }
 
 .media-title {
     font-family: var(--font-heading);
@@ -1060,7 +1122,7 @@ p:last-child {
     background-color: var(--color-primary-600);
     color: #FFFFFF;
     border-color: var(--color-primary-600);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .portfolio-card {
@@ -1115,10 +1177,10 @@ p:last-child {
     text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.bg-grad-branding { background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); }
-.bg-grad-community { background: linear-gradient(135deg, #0EA5E9 0%, #4F46E5 100%); }
-.bg-grad-podcast { background: linear-gradient(135deg, #F43F5E 0%, #FB923C 100%); }
-.bg-grad-startup { background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%); }
+.bg-grad-branding { background: linear-gradient(135deg, #1E293B 0%, #2563EB 100%); }
+.bg-grad-community { background: linear-gradient(135deg, #0284C7 0%, #0F172A 100%); }
+.bg-grad-podcast { background: linear-gradient(135deg, #0F172A 0%, #EA580C 100%); }
+.bg-grad-startup { background: linear-gradient(135deg, #059669 0%, #2563EB 100%); }
 
 .portfolio-body {
     padding: var(--space-6);
@@ -1429,7 +1491,7 @@ p:last-child {
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
     border-color: var(--color-primary-600);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-row {
@@ -1608,7 +1670,8 @@ p:last-child {
 }
 
 .cta-banner {
-    background: linear-gradient(135deg, var(--color-primary-600) 0%, #7C3AED 100%);
+    background: #090D16;
+    background: linear-gradient(145deg, #0F172A 0%, #020617 100%);
     border-radius: var(--radius-xl);
     padding: clamp(2.5rem, 5vw, 4rem);
     color: #FFFFFF;
@@ -1616,7 +1679,21 @@ p:last-child {
     grid-template-columns: 1fr;
     gap: var(--space-6);
     align-items: center;
-    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(2, 6, 23, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 @media (min-width: 992px) {
@@ -1632,7 +1709,7 @@ p:last-child {
 }
 
 .cta-lead {
-    color: #E0E7FF;
+    color: #CBD5E1;
     font-size: 1.1rem;
     line-height: 1.5;
 }

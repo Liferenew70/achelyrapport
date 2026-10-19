@@ -23,7 +23,7 @@ class HomeController
                 'name' => 'Koffi Fabrice',
                 'role' => 'Directeur Général',
                 'company' => 'Aura Cosmétiques',
-                'text' => 'Digital Agency Wiky a complètement métamorphosé notre image de marque. Du logo jusqu’au packaging, le professionnalisme de l’équipe a permis à nos produits d’intégrer les plus grandes pharmacies d’Abidjan.',
+                'text' => 'Wiky Holding a complètement métamorphosé notre image de marque. Du logo jusqu’au packaging, le professionnalisme de l’équipe a permis à nos produits d’intégrer les plus grandes pharmacies d’Abidjan.',
                 'rating' => 5
             ],
             [
@@ -42,7 +42,7 @@ class HomeController
             ]
         ];
 
-        $pageTitle = "Accueil • Agence de Communication Digitale & Branding à Abidjan";
+        $pageTitle = "Accueil • Wiky Holding • Agence Conseil 360°, Branding & Studio Podcast";
         $currentPage = 'home';
 
         require dirname(__DIR__) . '/Views/pages/home.php';

@@ -72,7 +72,7 @@ class ServiceModel
                     'Naming, slogan de marque (baseline) et storytelling d’entreprise',
                     'Création du pack de marque initial (logo, supports commerciaux, plaquette)',
                     'Mise en place de la stratégie d’acquisition digitale des 90 premiers jours',
-                    'Session de coaching privé avec les experts de Digital Agency Wiky'
+                    'Session de coaching privé avec les experts de Wiky Holding'
                 ],
                 'pricing' => 'Pack clé en main à partir de 450.000 FCFA',
                 'popular' => false
