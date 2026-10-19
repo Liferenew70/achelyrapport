@@ -1,0 +1,15 @@
+Path
+----
+C:\Users\hp\Downloads\BTS Achley
+
+regarde dans ce dossier il ya un rapport de stage, mais celui-ci est érroné car le site n'est plus disponible et on va changer de technologie (on verra un petit projet en projet en php MVP) avec les différents éléments comme la base de donnée en PDO, pour pouvoir héberger sur infinity free. donc tu lis le rapport tu adaptes au site, tu code en site et moderne, sans ia, pour ça regarde à la racine il ya un fichier text pour le front end, puis encore un texte à la racine pour faire un projet skill php. 
+
+
+dans le pdf, on ca s'occupé que de : DEUXIÈME PARTIE : CONCEPTION DU SITE WEB
+
+on va changer de technologie et d'environnemet, 
+
+
+
+
+c'est une entreprise qui fait les choses de : community management, répondre aux commentaire, les logo, identité visuelle en gros , le branding d'une entreprise, et un peu de création d'entrepise (sujet podcast,...) voit l'idée du site et créons le. en php mvp, même si le skill est pour laravel ou autre. FAIT.
