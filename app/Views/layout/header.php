@@ -18,11 +18,24 @@ if (!defined('APP_NAME')) {
     <meta name="author" content="Wiky Holding">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Réseaux Sociaux -->
+    <!-- Open Graph / Réseaux Sociaux (URLs absolues requises pour InfinityFree) -->
     <meta property="og:title" content="<?= e($pageTitle ?? APP_NAME) ?>">
     <meta property="og:description" content="Sublimez votre marque et dominez vos réseaux avec Wiky Holding à Abidjan.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= e(BASE_URL) ?>">
+    <meta property="og:site_name" content="<?= e(APP_NAME) ?>">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="<?= e(BASE_URL) ?>/assets/images/studio-podcast-abidjan.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Wiky Holding - Agence conseil 360° à Abidjan">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@wikyholding">
+    <meta name="twitter:title" content="<?= e($pageTitle ?? APP_NAME) ?>">
+    <meta name="twitter:description" content="Sublimez votre marque et dominez vos réseaux avec Wiky Holding à Abidjan.">
+    <meta name="twitter:image" content="<?= e(BASE_URL) ?>/assets/images/studio-podcast-abidjan.jpg">
 
     <!-- Préconnexion aux polices pour optimisation de chargement (Discipline 1 du design system) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
