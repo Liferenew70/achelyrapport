@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: "Pack Création & Lancement d'Entreprise", desc: "Kit complet pour formaliser et propulser une nouvelle marque à Abidjan", url: "index.php?page=services#creation-entreprise", tag: "Pack" },
         { title: "Nos Réalisations (Portfolio)", desc: "Découvrez nos projets récents en branding, social media et audiovisuel", url: "index.php?page=portfolio", tag: "Portfolio" },
         { title: "Simulateur de Devis en Ligne", desc: "Estimez votre budget sur-mesure en quelques clics sous 24h", url: "index.php?page=devis", tag: "Devis" },
-        { title: "Contact & Localisation", desc: "Nos bureaux à Cocody Riviera Palmeraie & Plateau, coordonnées et WhatsApp", url: "index.php?page=contact", tag: "Contact" },
+        { title: "Contact & Localisation", desc: "Nos bureaux à Abidjan, Cocody Rivera Faya, coordonnées et WhatsApp", url: "index.php?page=contact", tag: "Contact" },
         { title: "Questions Fréquentes (FAQ)", desc: "Gestion des commentaires, délais graphiques, matériel podcast et paiements", url: "index.php?page=contact", tag: "FAQ" }
     ];
 
@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const filtered = SITE_SEARCH_INDEX.filter(item => {
                 return item.title.toLowerCase().includes(query) ||
-                       item.desc.toLowerCase().includes(query) ||
-                       item.tag.toLowerCase().includes(query);
+                    item.desc.toLowerCase().includes(query) ||
+                    item.tag.toLowerCase().includes(query);
             });
 
             renderSearchResults(filtered);
@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const total = Math.round(base * mScope * mSpeed);
             calcResult.textContent = new Intl.NumberFormat('fr-FR').format(total) + ' FCFA';
-            
+
             // Animation subtile du chiffre
             calcResult.classList.add('price-updated');
             setTimeout(() => calcResult.classList.remove('price-updated'), 300);
