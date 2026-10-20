@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Stage - Digital Agency Wiky (Wiky Holding)</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 22mm 18mm 20mm 18mm;
+            @bottom-center {
+                content: "Rapport de Stage BTS IDA - KOUAME AFFOUE CYNTICHE ACHLEY DELMAS  |  Page " counter(page) " sur " counter(pages);
+                font-family: 'Inter', 'Segoe UI', sans-serif;
+                font-size: 7.5pt;
+                color: #6b7280;
+            }
+        }
+        @page cover {
+            margin: 0;
+            @bottom-center { content: ""; }
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.6;
+            color: #1f2937;
+            margin: 0;
+        }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; color: #0f172a; }
+        h1 { font-size: 20pt; margin: 0 0 10px 0; line-height: 1.25; }
+        h2 { font-size: 15pt; margin: 24px 0 10px 0; border-bottom: 2px solid #f97316; padding-bottom: 6px; }
+        h3 { font-size: 12.5pt; margin: 18px 0 8px 0; color: #1e3a8a; }
+        h4 { font-size: 11pt; margin: 14px 0 6px 0; color: #374151; }
+        p { margin: 0 0 10px 0; text-align: justify; }
+        ul, ol { margin: 6px 0 12px 0; padding-left: 22px; }
+        li { margin-bottom: 4px; text-align: justify; }
+        strong { color: #111827; }
+        .page-break { page-break-before: always; }
+        .avoid-break { page-break-inside: avoid; }
+        table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 9.5pt; }
+        th { background: #0f172a; color: #fff; text-align: left; padding: 8px 10px; font-weight: 600; }
+        td { border: 1px solid #e5e7eb; padding: 8px 10px; vertical-align: top; }
+        tr:nth-child(even) td { background: #f9fafb; }
+
+        /* ---------- COUVERTURE ---------- */
+        .cover { page: cover; height: 297mm; width: 210mm; position: relative; background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 55%, #f97316 100%); color: #fff; padding: 30mm 22mm; }
+        .cover .logo { width: 70mm; margin-bottom: 12mm; }
+        .cover h1 { font-size: 30pt; color: #fff; line-height: 1.2; margin: 0 0 6mm 0; }
+        .cover h2 { font-size: 15pt; color: #fbbf24; border: none; padding: 0; margin: 0 0 10mm 0; font-weight: 500; }
+        .cover p { color: #e5e7eb; font-size: 11pt; margin: 0 0 5mm 0; text-align: left; }
+        .cover .meta-block { margin-top: 14mm; border-top: 1px solid rgba(255,255,255,0.35); padding-top: 8mm; }
+        .cover .meta-table { color: #fff; font-size: 10.5pt; }
+        .cover .meta-table td { border: none; padding: 4px 8px 4px 0; color: #e5e7eb; }
+        .cover .meta-table td.k { color: #f97316; font-weight: 700; width: 34mm; }
+        .cover .footer-cover { position: absolute; bottom: 18mm; left: 22mm; right: 22mm; font-size: 8.5pt; color: #cbd5e1; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 4mm; }
+
+        /* ---------- SOMMAIRE ---------- */
+        .sommaire h2 { border-bottom: 2px solid #0f172a; }
+        .sommaire ul { list-style: none; padding-left: 0; }
+        .sommaire li { margin-bottom: 8px; font-size: 11pt; padding-left: 18px; position: relative; }
+        .sommaire li::before { content: ""; position: absolute; left: 0; top: 6px; width: 8px; height: 8px; background: #f97316; border-radius: 50%; }
+        .sommaire li a { text-decoration: none; color: #1f2937; }
+        .sommaire .sous { margin-left: 24px; font-size: 10pt; color: #4b5563; }
+        .sommaire .sous::before { display: none; }
+
+        /* ---------- BLOCS ---------- */
+        .encadré { background: #f8fafc; border-left: 4px solid #f97316; padding: 10px 14px; margin: 14px 0; border-radius: 0 6px 6px 0; page-break-inside: avoid; }
+        .encadré h4 { margin-top: 0; color: #0f172a; font-size: 11pt; }
+        .encadré p { margin: 4px 0 0 0; font-size: 10pt; }
+        .badge { display: inline-block; background: #f97316; color: #fff; font-size: 8pt; font-weight: 700; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 6px; }
+
+        /* ---------- FIGURES / CAPTURES ---------- */
+        .figure { page-break-inside: avoid; text-align: center; margin: 16px 0; }
+        .figure img { max-width: 100%; border: 1px solid #d1d5db; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .figure .legende { font-size: 8.5pt; color: #6b7280; margin-top: 5px; font-style: italic; text-align: center; }
+        .figure-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; page-break-inside: avoid; margin: 14px 0; }
+        .figure-row .figure { margin: 0; width: 48%; }
+        .figure-row .figure img { width: 100%; }
+
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+        .tech-stack span { background: #eef2ff; color: #1e3a8a; font-size: 8.5pt; padding: 4px 10px; border-radius: 12px; font-weight: 600; border: 1px solid #c7d2fe; }
+
+        .col2 { column-count: 2; column-gap: 18px; column-rule: 1px solid #e5e7eb; }
+        .col2 p { break-inside: avoid-column; }
+
+        small { color: #6b7280; font-size: 8.5pt; }
+        .signature { margin-top: 26px; page-break-inside: avoid; }
+        .signature table { width: auto; margin: 0; }
+        .signature td { border: none; padding: 2px 0; font-size: 9.5pt; }
+        .ligne-sig { border-top: 1px solid #0f172a; width: 60mm; margin-top: 26px; padding-top: 4px; font-size: 9pt; color: #374151; }
+    </style>
+</head>
+<body>
+
+    <!-- ================= COUVERTURE ================= -->
+    <div class="cover">
+        <img src="captures/screens/logo-wiky-placeholder.svg" alt="Wiky Holding" class="logo" style="display:none;">
+        <div style="text-align:left;">
+            <div style="font-size:10pt; letter-spacing:2px; text-transform:uppercase; color:#fbbf24; font-weight:700;">RAPPORT DE STAGE</div>
+            <h1>Conception et Développement d'un Site Web Institutionnel<br>en Architecture MVP / MVC avec PHP & PDO</h1>
+            <h2>Étude de cas : Digital Agency Wiky (Wiky Holding) — Abidjan, Côte d'Ivoire</h2>
+        </div>
+        <div class="meta-block">
+            <table class="meta-table">
+                <tr><td class="k">Étudiant(e)</td><td>KOUAME AFFOUE CYNTICHE ACHLEY DELMAS</td></tr>
+                <tr><td class="k">Diplôme préparé</td><td>Brevet de Technicien Supérieur (BTS)</td></tr>
+                <tr><td class="k">Option</td><td>Informatique – Développeur d'Application (IDA)</td></tr>
+                <tr><td class="k">Entreprise d'accueil</td><td>Wiky Holding SARL (Digital Agency Wiky)</td></tr>
+                <tr><td class="k">Localisation</td><td>Abidjan, Cocody Riviera Faya, Côte d'Ivoire</td></tr>
+                <tr><td class="k">Encadrant pédagogique</td><td>………………………………………………</td></tr>
+                <tr><td class="k">Maître de stage</td><td>………………………………………………</td></tr>
+                <tr><td class="k">Année universitaire</td><td>2025 – 2026</td></tr>
+            </table>
+        </div>
+        <div class="footer-cover">
+            Rapport réalisé dans le cadre de la soutenance du BTS Informatique Développeur d'Application.<br>
+            Site moderne développé en PHP Vanilla (MVP/MVC), base de données PDO (MySQL / SQLite), hébergé sur InfinityFree.
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= REMERCIEMENTS ================= -->
+    <h1 style="font-size:22pt; text-align:center; margin-top:10mm;">Remerciements</h1>
+    <div class="encadré" style="text-align:center; max-width:160mm; margin:12mm auto;">
+        <p style="font-style:italic; font-size:11pt;">« Seul on va plus vite, ensemble on va plus loin. »</p>
+    </div>
+    <p>Je tiens à exprimer ma profonde reconnaissance à l'ensemble de l'équipe de <strong>Wiky Holding SARL</strong> pour m'avoir accueillie au sein de son agence et pour la confiance accordée tout au long de ce stage. Un merci tout particulier à mon maître de stage pour son accompagnement, ses conseils techniques et sa disponibilité.</p>
+    <p>Je remercie également mes formateurs et l'équipe pédagogique de mon établissement pour leur encadrement et leur suivi rigoureux durant la préparation de ce rapport et de ma soutenance.</p>
+    <p>Enfin, je remercie ma famille et mes proches pour leur soutien moral et leur patience durant cette période de formation intensive.</p>
+
+    <div class="page-break"></div>
+
+    <!-- ================= SOMMAIRE ================= -->
+    <h1 style="font-size:22pt; border-bottom:3px solid #0f172a; padding-bottom:8px;">Sommaire</h1>
+    <div class="sommaire">
+        <ul>
+            <li><a href="#intro">Introduction Générale</a></li>
+            <li><a href="#partie1">Première Partie : L'Entreprise d'Accueil — Wiky Holding</a>
+                <ul class="sous">
+                    <li><a href="#p1-1">Présentation de l'entreprise</a></li>
+                    <li><a href="#p1-2">Secteur d'activité et métiers exercés</a></li>
+                    <li><a href="#p1-3">Organisation et environnement de travail</a></li>
+                </ul>
+            </li>
+            <li><a href="#partie2">Deuxième Partie : Conception du Site Web (Cœur du Rapport)</a>
+                <ul class="sous">
+                    <li><a href="#p2-1">Contexte et justification du choix technologique</a></li>
+                    <li><a href="#p2-2">Analyse des besoins et cahier des charges</a></li>
+                    <li><a href="#p2-3">Conception : architecture MVP / MVC</a></li>
+                    <li><a href="#p2-4">Modèle de données (MCD / MLD) et base PDO</a></li>
+                    <li><a href="#p2-5">Développement backend et frontend</a></li>
+                    <li><a href="#p2-6">Présentation détaillée des fonctionnalités (avec captures)</a></li>
+                    <li><a href="#p2-7">Sécurité et bonnes pratiques</a></li>
+                </ul>
+            </li>
+            <li><a href="#tests">Tests et Débogage</a></li>
+            <li><a href="#deploiement">Déploiement et Mise en Production (InfinityFree / WAMP)</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#annexes">Annexes</a></li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= INTRODUCTION ================= -->
+    <h1 id="intro">Introduction Générale</h1>
+    <p>Le stage en entreprise constitue une étape déterminante du parcours du Brevet de Technicien Supérieur (BTS) Informatique, option <strong>Développeur d'Application (IDA)</strong>. Il a pour objectif de confronter l'étudiant(e) aux réalités du métier de développeur, d'appliquer les connaissances théoriques acquises en formation et de développer une compétence professionnelle concrète au service d'un besoin réel d'entreprise.</p>
+    <p>Ce rapport présente le travail réalisé lors de mon stage au sein de <strong>Wiky Holding SARL</strong>, une agence conseil 360° basée à Abidjan (Côte d'Ivoire), spécialisée dans le community management, l'identité visuelle (branding), le studio podcast et la création d'entreprise. L'entreprise disposait d'un ancien site vitrine sous WordPress qui n'est plus opérationnel. Dans le cadre de ce stage, il m'a été confié la mission de <strong>concevoir et développer un nouveau site web moderne, propriétaire et performant</strong>, adapté aux métiers de l'agence et déployable sur un hébergement gratuit de type InfinityFree.</p>
+    <p>Afin de correspondre au profil métier de <strong>Développeur d'Application (IDA)</strong>, le site a été intégralement recodé en <strong>PHP Vanilla moderne, sous architecture MVP / MVC</strong>, avec une couche d'accès aux données par <strong>PDO</strong> (requêtes préparées, protection contre les injections SQL), sans dépendance à un CMS tiers. Cette approche démontre une maîtrise complète de la programmation, du routage, de la base de données relationnelle et de la sécurité applicative.</p>
+    <div class="encadré">
+        <h4>Objectifs du stage</h4>
+        <ul>
+            <li>Analyser les besoins de communication digitale de Wiky Holding.</li>
+            <li>Concevoir l'architecture technique d'un site web d'entreprise (MVP/MVC, base de données).</li>
+            <li>Développer les fonctionnalités front-end et back-end (services, portfolio, studio podcast, contact, simulateur de devis).</li>
+            <li>Sécuriser les formulaires (CSRF, XSS, validation des données).</li>
+            <li>Tester, déboguer et déployer le site sur un hébergement réel.</li>
+            <li>Rédiger le présent rapport de stage en vue de la soutenance BTS.</li>
+        </ul>
+    </div>
+    <p>Le document est structuré en deux grandes parties : une première partie dédiée à l'entreprise d'accueil (contexte, métiers, organisation), et une deuxième partie — le cœur du rapport — consacrée à la conception et au développement du nouveau site web, illustrée par des captures d'écran réelles de l'application fonctionnelle.</p>
+
+    <div class="page-break"></div>
+
+    <!-- ================= PARTIE 1 ================= -->
+    <h1 id="partie1">Première Partie : L'Entreprise d'Accueil — Wiky Holding</h1>
+
+    <h2 id="p1-1">1. Présentation de l'entreprise</h2>
+    <p><strong>Wiky Holding</strong> (également désignée <em>Digital Agency Wiky</em>) est une agence conseil 360° basée à <strong>Abidjan, Cocody Riviera Faya, en Côte d'Ivoire</strong>. Elle accompagne les marques, PME, créateurs et dirigeants dans la valorisation de leur image de marque, l'animation de leurs communautés digitales et la production de contenus audiovisuels percutants.</p>
+    <table>
+        <tr><th style="width:34%;">Information</th><th>Détail</th></tr>
+        <tr><td><strong>Nom légal</strong></td><td>Wiky Holding SARL</td></tr>
+        <tr><td><strong>Enseigne</strong></td><td>Digital Agency Wiky / Wiky Holding</td></tr>
+        <tr><td><strong>Siège social</strong></td><td>Abidjan, Cocody Riviera Faya, Côte d'Ivoire</td></tr>
+        <tr><td><strong>Téléphone / WhatsApp</strong></td><td>+225 07 88 83 70 24 / +225 27 24 42 42 00</td></tr>
+        <tr><td><strong>Email</strong></td><td>Wikytechnologieci@gmail.com</td></tr>
+        <tr><td><strong>Horaires</strong></td><td>Lun - Ven : 08h30 - 18h30 | Sam : 09h00 - 14h00</td></tr>
+    </table>
+
+    <h2 id="p1-2">2. Secteur d'activité et métiers exercés</h2>
+    <p>Wiky Holding intervient sur quatre pôles de compétences complémentaires, couvrant l'ensemble de la chaîne de valeur de la communication moderne :</p>
+    <div class="tech-stack">
+        <span>Community Management</span>
+        <span>Modération 7j/7</span>
+        <span>Identité Visuelle</span>
+        <span>Branding & Logos</span>
+        <span>Studio Podcast 4K</span>
+        <span>Audiovisuel</span>
+        <span>Création d'Entreprise</span>
+        <span>Meta Ads & Google Ads</span>
+    </div>
+    <ul>
+        <li><strong>Community Management & Modération :</strong> animation quotidienne des réseaux sociaux (Facebook, Instagram, LinkedIn, TikTok), rédaction de contenus, modération des commentaires et messages privés 7j/7, pilotage de campagnes sponsorisées (Meta Ads, Google Ads).</li>
+        <li><strong>Identité Visuelle & Branding :</strong> création de logos vectoriels, chartes graphiques complètes, kits papeterie, bannières et supports marketing haute définition.</li>
+        <li><strong>Studio Podcast & Production Audiovisuelle :</strong> studio insonorisé et équipé à Abidjan, captation 4K multi-caméras, micros broadcast, montage dynamique, voix off et découpage de capsules courtes (Reels, TikTok, Shorts).</li>
+        <li><strong>Création d'Entreprise & Stratégie :</strong> naming, positionnement de marque, storytelling, kit de lancement et accompagnement des porteurs de projets.</li>
+    </ul>
+
+    <h2 id="p1-3">3. Organisation et environnement de travail</h2>
+    <p>L'agence est organisée en pôles opérationnels pilotés par une direction générale et une chargée de projets dédiée, garantissant un suivi personnalisé de chaque client et le respect des délais de livraison. Durant le stage, j'ai intégré l'équipe technique en tant que développeuse, en collaboration avec les chargés de communication et les graphistes pour traduire les besoins métiers en fonctionnalités web concrètes.</p>
+    <p>L'environnement de travail repose sur des outils numériques collaboratifs, une veille constante sur les tendances du digital en Afrique de l'Ouest, et une exigence de qualité sur les livrables (charte graphique, respect des délais, reporting de performance).</p>
+
+    <div class="page-break"></div>
+
+    <!-- ================= PARTIE 2 ================= -->
+    <h1 id="partie2">Deuxième Partie : Conception du Site Web</h1>
+    <p style="font-size:11pt; color:#4b5563; font-style:italic;">Cette partie constitue le cœur du rapport de stage. Elle détaille la conception, le développement et la validation du nouveau site web de Wiky Holding, développé sur mesure en PHP MVP/MVC + PDO, en remplacement de l'ancien site WordPress devenu indisponible.</p>
+
+    <h2 id="p2-1">1. Contexte et justification du choix technologique</h2>
+    <p>L'ancien site de l'agence était construit sous <strong>WordPress avec le constructeur Elementor</strong>. Celui-ci n'est plus disponible et ne correspond plus aux exigences du profil <strong>Développeur d'Application (IDA)</strong>, qui implique une maîtrise du code propriétaire, de l'architecture logicielle et de la gestion de base de données.</p>
+    <table>
+        <tr><th style="width:30%;">Critère</th><th>Ancienne approche (WordPress)</th><th>Nouvelle approche (PHP MVP + PDO)</th></tr>
+        <tr><td>Profil métier</td><td>Intégrateur CMS / No-Code</td><td><strong>Développeur d'Application (IDA)</strong></td></tr>
+        <tr><td>Maîtrise du code</td><td>Dépendance aux thèmes et plugins</td><td><strong>100 % de code propriétaire et structuré</strong></td></tr>
+        <tr><td>Vitesse d'affichage</td><td>Lourd (&gt; 3 s, requêtes multiples)</td><td><strong>Ultra-rapide (&lt; 500 ms, CSS et JS purs)</strong></td></tr>
+        <tr><td>Accès aux données</td><td>Abstrait par WordPress</td><td><strong>Requêtes préparées PDO explicites</strong></td></tr>
+        <tr><td>Sécurité</td><td>Failles récurrentes de plugins</td><td><strong>Sanitisation, tokens CSRF, échappement XSS</strong></td></tr>
+        <tr><td>Hébergement</td><td>CMS lourd, dépendances</td><td><strong>Compatible InfinityFree (Apache/PHP/MySQL standard)</strong></td></tr>
+        <tr><td>Indépendance</td><td>Maintenance complexe des versions</td><td><strong>Pérennité totale sur n'importe quel hébergeur</strong></td></tr>
+    </table>
+
+    <h2 id="p2-2">2. Analyse des besoins et cahier des charges</h2>
+    <h3>2.1 Besoins fonctionnels identifiés</h3>
+    <ul>
+        <li>Présenter l'agence, ses 4 métiers et son équipe (page <em>Accueil</em>, <em>À Propos</em>).</li>
+        <li>Détailler chaque prestation avec tarifs indicatifs et formules packs (page <em>Services</em>).</li>
+        <li>Valoriser les réalisations clients via un portfolio filtrable (page <em>Portfolio</em>).</li>
+        <li>Mettre en avant le studio d'enregistrement 4K (page <em>Studio Podcast</em>).</li>
+        <li>Permettre la prise de contact via un formulaire sécurisé (page <em>Contact</em>).</li>
+        <li>Proposer un simulateur de devis en temps réel avec enregistrement de la demande (page <em>Devis</em>).</li>
+    </ul>
+    <h3>2.2 Arborescence du site</h3>
+    <ul>
+        <li><strong>Accueil</strong> (`?page=home`) : Hero section, chiffres clés (KPIs), aperçu des 4 pôles, réalisations, méthodologie en 4 étapes, témoignages, CTA de conversion.</li>
+        <li><strong>À Propos</strong> (`?page=about`) : histoire, mission, les 4 pôles internes, valeurs de l'entreprise.</li>
+        <li><strong>Services</strong> (`?page=services`) : détail des 4 métiers, livrables inclus, tarifs, 3 formules packs (Starter, Identité de Marque, Studio Podcast).</li>
+        <li><strong>Portfolio / Réalisations</strong> (`?page=portfolio`) : galerie filtrable par catégorie (Branding, Community Management, Podcast, Création d'Entreprise) avec métriques d'impact.</li>
+        <li><strong>Studio Podcast</strong> (`?page=podcast`) : équipements broadcast, tarification, sujets d'émissions suggérés.</li>
+        <li><strong>Contact</strong> (`?page=contact`) : coordonnées à Abidjan, WhatsApp direct, formulaire sécurisé, FAQ.</li>
+        <li><strong>Devis</strong> (`?page=devis`) : simulateur dynamique en temps réel (FCFA) et demande enregistrée en base de données.</li>
+    </ul>
+
+    <h2 id="p2-3">3. Conception : architecture MVP / MVC</h2>
+    <p>Le projet folgt le patron d'architecture <strong>MVP / MVC (Model-View-Presenter / Model-View-Controller)</strong>, assurant une séparation claire des responsabilités :</p>
+    <table>
+        <tr><th style="width:22%;">Couche</th><th>Rôle</th><th>Fichiers principaux</th></tr>
+        <tr><td><strong>Modèle (Model)</strong></td><td>Accès aux données et logique métier (requêtes PDO).</td><td>`app/Models/*Model.php`</td></tr>
+        <tr><td><strong>Vue (View)</strong></td><td>Affichage HTML et templates de pages.</td><td>`app/Views/pages/*.php` + `layout/`</td></tr>
+        <tr><td><strong>Contrôleur (Controller)</strong></td><td>Routage des actions, traitement des requêtes, passage des données aux vues.</td><td>`app/Controllers/*Controller.php`</td></tr>
+        <tr><td><strong>Contrôleur frontal</strong></td><td>Point d'entrée unique qui route chaque URL vers le bon contrôleur.</td><td>`index.php`</td></tr>
+        <tr><td><strong>Configuration</strong></td><td>Constantes de l'application, helpers, connexion base de données.</td><td>`app/Config/App.php`, `Database.php`</td></tr>
+    </table>
+    <p>Le fichier <strong>`index.php`</strong> agit comme <em>Front Controller</em> : il analyse l'URL demandée (paramètre `?page=` ou réécriture via `.htaccess`), instancie le contrôleur correspondant et génère la page. Cette architecture rend le code maintenable, testable et évolutif.</p>
+
+    <h2 id="p2-4">4. Modèle de données et base de données (PDO)</h2>
+    <p>Le site repose sur une base de données relationnelle avec deux tables dynamiques, accessibles via <strong>PHP Data Objects (PDO)</strong> avec <strong>requêtes préparées</strong> afin de se prémunir contre les injections SQL :</p>
+    <table>
+        <tr><th style="width:20%;">Table</th><th>Champs principaux</th><th>Usage</th></tr>
+        <tr><td><strong>messages</strong></td><td>id, name, email, phone, service, subject, message, created_at</td><td>Stockage des messages du formulaire de contact.</td></tr>
+        <tr><td><strong>devis_requests</strong></td><td>id, company_name, contact_name, email, phone, service_type, budget_range, urgency, project_details, created_at</td><td>Enregistrement des demandes de devis du simulateur.</td></tr>
+    </table>
+    <p>La classe <strong>`Database`</strong> implémente un <strong>singleton PDO</strong>. Elle tente d'abord une connexion MySQL (hébergement InfinityFree ou local WAMP/XAMPP) et bascule automatiquement sur <strong>SQLite</strong> en mode démonstration si MySQL n'est pas configuré, garantissant ainsi un fonctionnement immédiat en toute circonstance. Les tables sont créées automatiquement si elles n'existent pas.</p>
+
+    <h2 id="p2-5">5. Développement backend et frontend</h2>
+    <h3>5.1 Backend (PHP 7.4 à 8.3)</h3>
+    <ul>
+        <li>Programmation orientée objet, typage strict, namespaces (`App\Controllers`, `App\Models`, `app\Config`).</li>
+        <li>Chargement automatique des classes via `spl_autoload_register`.</li>
+        <li>Helpers d'échappement XSS (`e()`) et de génération d'URL (`url()`).</li>
+        <li>Protection <strong>CSRF</strong> sur les formulaires de contact et de devis (jeton aléatoire `random_bytes(32)` vérifié avec `hash_equals`).</li>
+        <li>Validation côté serveur des données (longueur, format email, champs requis).</li>
+        <li>Messages flash (succès / erreur) stockés en session après soumission.</li>
+    </ul>
+    <h3>5.2 Frontend (HTML5, CSS3, JavaScript ES6 vanilla)</h3>
+    <ul>
+        <li>Design system avec <strong>CSS variables (design tokens)</strong> : couleurs, espacement, typographie, ombres, transitions.</li>
+        <li>Typographie fluide avec <code>clamp()</code>, polices Google Fonts (Inter, Plus Jakarta Sans).</li>
+        <li>Responsive mobile-first (breakpoints sm/md/lg/xl/xxl).</li>
+        <li>Thèmes adaptatifs : clair, sombre (Obsidienne), bleu nuit, avec sélecteur de couleur d'accent personnalisable.</li>
+        <li>Menu latéral « aside drawer », recherche instantanée (Ctrl+K), bouton flottant « remonter en haut » avec jauge de scroll.</li>
+        <li>Simulateur de devis en temps réel (calcul du prix en FCFA sans rechargement).</li>
+        <li>Filtrage dynamique du portfolio par catégorie.</li>
+        <li>Respect de <code>prefers-reduced-motion</code> (accessibilité).</li>
+    </ul>
+    <div class="tech-stack">
+        <span>PHP 8.x</span>
+        <span>PDO (MySQL / SQLite)</span>
+        <span>Apache + .htaccess</span>
+        <span>HTML5 sémantique</span>
+        <span>CSS3 (Design Tokens)</span>
+        <span>JavaScript ES6</span>
+        <span>Google Fonts</span>
+        <span>InfinityFree</span>
+    </div>
+
+    <h2 id="p2-6">6. Présentation détaillée des fonctionnalités (captures d'écran)</h2>
+    <p>Les captures ci-dessous ont été réalisées directement sur le site en fonctionnement local (serveur PHP intégré, `http://localhost:8000`). Elles illustrent le rendu réel de chaque page du nouveau site Wiky Holding.</p>
+
+    <div class="figure">
+        <img src="captures/screens/accueil-desktop.png" alt="Page d'accueil du site Wiky Holding">
+        <div class="legende">Figure 1 — Page d'accueil : Hero section, chiffre clés, aperçu des services et témoignages clients.</div>
+    </div>
+
+    <div class="figure-row">
+        <div class="figure">
+            <img src="captures/screens/services-desktop.png" alt="Page Services">
+            <div class="legende">Figure 2 — Page Services : détail des 4 métiers et packs tarifaires.</div>
+        </div>
+        <div class="figure">
+            <img src="captures/screens/portfolio-desktop.png" alt="Page Portfolio">
+            <div class="legende">Figure 3 — Page Portfolio : galerie filtrable des réalisations clients.</div>
+        </div>
+    </div>
+
+    <div class="figure-row">
+        <div class="figure">
+            <img src="captures/screens/podcast-desktop.png" alt="Page Studio Podcast">
+            <div class="legende">Figure 4 — Page Studio Podcast : équipements, tarification et sujets d'émissions.</div>
+        </div>
+        <div class="figure">
+            <img src="captures/screens/contact-desktop.png" alt="Page Contact">
+            <div class="legende">Figure 5 — Page Contact : formulaire sécurisé, coordonnées et WhatsApp.</div>
+        </div>
+    </div>
+
+    <div class="figure-row">
+        <div class="figure">
+            <img src="captures/screens/devis-desktop.png" alt="Page Devis">
+            <div class="legende">Figure 6 — Page Devis : simulateur en temps réel et formulaire de demande.</div>
+        </div>
+        <div class="figure">
+            <img src="captures/screens/a-propos-desktop.png" alt="Page À Propos">
+            <div class="legende">Figure 7 — Page À Propos : histoire, pôles et valeurs de Wiky Holding.</div>
+        </div>
+    </div>
+
+    <div class="figure-row">
+        <div class="figure">
+            <img src="captures/screens/accueil-mobile.png" alt="Version mobile accueil">
+            <div class="legende">Figure 8 — Version mobile (accueil) : menu hamburger et affichage adaptatif.</div>
+        </div>
+        <div class="figure">
+            <img src="captures/screens/devis-mobile.png" alt="Version mobile devis">
+            <div class="legende">Figure 9 — Version mobile (simulateur de devis) : adaptabilité sur petit écran.</div>
+        </div>
+    </div>
+
+    <h2 id="p2-7">7. Sécurité et bonnes pratiques appliquées</h2>
+    <ul>
+        <li><strong>Requêtes préparées PDO</strong> : élimination du risque d'injection SQL sur toutes les écritures en base.</li>
+        <li><strong>Échappement XSS</strong> : fonction `e()` (htmlspecialchars) appliquée à chaque affichage de donnée utilisateur.</li>
+        <li><strong>Tokens CSRF</strong> : génération et validation de jetons uniques par session sur les formulaires POST.</li>
+        <li><strong>Validation des entrées</strong> : contrôle serveur du format email, des longueurs minimales et des champs obligatoires.</li>
+        <li><strong>Fichiers sensibles protégés</strong> : `.htaccess` interdit l'accès direct à `database.sql`, `database.sqlite` et aux rapports PDF.</li>
+        <li><strong>En-têtes de sécurité</strong> : `X-Content-Type-Options`, `X-Frame-Options`, `X-XSS-Protection`.</li>
+        <li><strong>Réécriture d'URL</strong> : URLs propres via `mod_rewrite` et contrôleur frontal unique.</li>
+    </ul>
+
+    <div class="page-break"></div>
+
+    <!-- ================= TESTS ================= -->
+    <h1 id="tests">Tests et Débogage</h1>
+    <p>Avant la mise en production, une campagne de tests a été menée pour valider le bon fonctionnement du site sur l'environnement local (WAMP / serveur intégré PHP) et corriger les anomalies détectées.</p>
+    <table>
+        <tr><th style="width:26%;">Élément testé</th><th>Cas de test</th><th>Résultat</th><th>Statut</th></tr>
+        <tr><td>Chargement des pages</td><td>Accueil, À propos, Services, Portfolio, Podcast, Contact, Devis</td><td>Toutes les pages s'affichent sans erreur PHP</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Routage MVC</td><td>Changement de page via `?page=` et URLs réécrites</td><td>Le Front Controller redirige vers le bon contrôleur</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Base de données</td><td>Création automatique des tables (MySQL et SQLite fallback)</td><td>Tables créées, PDO connecté en singleton</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Formulaire Contact</td><td>Soumission avec données valides et invalides</td><td>Validation OK, message enregistré, flash affiché</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Formulaire Devis</td><td>Soumission complète et champs manquants</td><td>Enregistrement en base, simulation de prix affichée</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Simulateur de devis</td><td>Changement de service / envergure / urgence</td><td>Prix recalculé en temps réel (JS) en FCFA</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Sécurité CSRF</td><td>Soumission sans jeton ou jeton falsifié</td><td>Rejet de la requête, message d'erreur affiché</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Responsive</td><td>Affichage desktop (1366 px) et mobile (375 px)</td><td>Mise en page adaptative, menu hamburger fonctionnel</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+        <tr><td>Page 404</td><td>Accès à une route inexistante</td><td>Page 404 personnalisée affichée avec code HTTP 404</td><td><span style="color:#16a34a; font-weight:700;">✓ Validé</span></td></tr>
+    </table>
+    <div class="encadré">
+        <h4>Débogage effectué</h4>
+        <p>Lors des tests, les anomalies suivantes ont été corrigées : cohérence des chemins d'assets (`ASSETS_URL`), adaptation de la syntaxe de date SQL entre MySQL (`NOW()`) et SQLite (`datetime('now')`), initialisation du jeton CSRF avant affichage des formulaires, et gestion du fallback SQLite pour permettre une démonstration immédiate sans configuration MySQL.</p>
+    </div>
+
+    <div class="page-break"></div">
+
+    <!-- ================= DEPLOIEMENT ================= -->
+    <h1 id="deploiement">Déploiement et Mise en Production</h1>
+    <p>Le site a été conçu pour être déployé indifféremment en local (WAMP / XAMPP / serveur intégré PHP) et en production sur l'hébergeur gratuit <strong>InfinityFree</strong>, compatible Apache/PHP/MySQL sans dépendance lourde (aucune installation Node/Composer requise à l'exécution).</p>
+    <h3>Étapes de déploiement sur InfinityFree</h3>
+    <ol>
+        <li>Créer un compte sur <em>app.infinityfree.com</em> et un sous-domaine (ex. `wikyholding.infinityfreeapp.com`).</li>
+        <li>Créer une base de données MySQL dans le cPanel (rubrique <em>MySQL Databases</em>) et noter l'hôte, le nom, l'utilisateur et le mot de passe.</li>
+        <li>Ouvrir phpMyAdmin, sélectionner la base et importer le fichier <strong>`database.sql`</strong>.</li>
+        <li>Configurer les constantes de connexion dans <strong>`app/Config/Database.php`</strong> (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`).</li>
+        <li>Transférer l'ensemble des fichiers du projet dans le répertoire <em>htdocs/</em> via FTP (FileZilla) ou le gestionnaire de fichiers en ligne.</li>
+        <li>Le site est immédiatement accessible en ligne avec HTTPS automatique.</li>
+    </ol>
+    <h3>Test en local (WAMP)</h3>
+    <ol>
+        <li>Déposer le dossier dans <code>C:\wamp64\www\achelyrapport</code>.</li>
+        <li>Lancer Apache et MySQL via le panneau WAMP.</li>
+        <li>Importer <code>database.sql</code> dans phpMyAdmin ou laisser le mode SQLite fallback s'en charger automatiquement.</li>
+        <li>Accéder à <code>http://localhost/achelyrapport/</code>.</li>
+    </ol>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CONCLUSION ================= -->
+    <h1 id="conclusion">Conclusion</h1>
+    <p>Ce stage a permis de mettre en pratique l'ensemble des compétences du référentiel BTS Informatique Développeur d'Application : analyse d'un besoin métier, conception d'une architecture logicielle (MVP/MVC), développement en PHP natif avec accès aux données par PDO, sécurisation des formulaires (CSRF, XSS, requêtes préparées), développement front-end responsive et accessible, tests fonctionnels et déploiement en production.</p>
+    <p>Le nouveau site de <strong>Wiky Holding</strong> remplace avantageusement l'ancien site WordPress indisponible. Il offre à l'agence une vitrine moderne, rapide, sécurisée et totalement indépendante, présentant ses quatre pôles d'expertise (Community Management, Identité Visuelle, Studio Podcast, Création d'Entreprise) avec un portfolio filtrان et un simulateur de devis en temps réel.</p>
+    <p>Cette réalisation démontre ma capacité à concevoir, développer et livrer une application web complète, du cahier des charges à la mise en ligne, dans le respect des bonnes pratiques de développement et des exigences du métier de développeur d'application.</p>
+
+    <div class="signature">
+        <table>
+            <tr>
+                <td style="width:90mm;">
+                    <div class="ligne-sig">Fait à Abidjan, le …………………</div>
+                    <div style="margin-top:4px;"><strong>KOUAME AFFOUE CYNTICHE ACHLEY DELMAS</strong><br>Étudiante BTS Informatique IDA</div>
+                </td>
+                <td style="width:90mm;">
+                    <div class="ligne-sig">Visa du maître de stage</div>
+                    <div style="margin-top:4px;"><strong>………………………………………………</strong><br>Wiky Holding SARL</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= ANNEXES ================= -->
+    <h1 id="annexes">Annexes</h1>
+    <h2>Arborescence technique du projet</h2>
+    <pre style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:8.5pt; line-height:1.5; overflow:auto;">
+achelyrapport/
+├── app/
+│   ├── Config/
+│   │   ├── App.php             # Constantes, helpers e() et url()
+│   │   └── Database.php        # Singleton PDO MySQL / fallback SQLite
+│   ├── Controllers/
+│   │   ├── HomeController.php
+│   │   ├── AboutController.php
+│   │   ├── ServiceController.php
+│   │   ├── PortfolioController.php
+│   │   ├── PodcastController.php
+│   │   ├── ContactController.php
+│   │   └── DevisController.php
+│   ├── Models/
+│   │   ├── ContactModel.php
+│   │   ├── DevisModel.php
+│   │   ├── PortfolioModel.php
+│   │   └── ServiceModel.php
+│   └── Views/
+│       ├── layout/
+│       │   ├── header.php
+│       │   ├── navbar.php
+│       │   └── footer.php
+│       └── pages/
+│           ├── home.php
+│           ├── about.php
+│           ├── services.php
+│           ├── portfolio.php
+│           ├── podcast.php
+│           ├── contact.php
+│           └── devis.php
+├── assets/
+│   ├── css/style.css           # Design system (tokens, responsive, thèmes)
+│   └── js/main.js              # Thèmes, recherche, simulateur, filtre portfolio
+├── database.sql                # Schéma MySQL (messages, devis_requests)
+├── .htaccess                   # Sécurité et réécriture d'URL
+└── index.php                   # Contrôleur frontal (Front Controller)
+    </pre>
+    <h2>Technologies utilisées</h2>
+    <div class="tech-stack">
+        <span>PHP 7.4 → 8.3</span>
+        <span>PDO (PHP Data Objects)</span>
+        <span>MySQL / MariaDB</span>
+        <span>SQLite (fallback démo)</span>
+        <span>Apache HTTP Server</span>
+        <span>HTML5 sémantique</span>
+        <span>CSS3 (Design Tokens, clamp)</span>
+        <span>JavaScript ES6 (vanilla)</span>
+        <span>Google Fonts (Inter, Plus Jakarta Sans)</span>
+        <span>InfinityFree (hébergement)</span>
+        <span>WAMP (développement local)</span>
+    </div>
+
+</body>
+</html>
