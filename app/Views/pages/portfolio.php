@@ -42,12 +42,23 @@ require dirname(__DIR__) . '/layout/header.php';
                     <article class="card portfolio-card" data-category="<?= e($item['category']) ?>">
                         <div class="portfolio-thumb">
                             <div class="portfolio-category-badge"><?= e($item['category_name']) ?></div>
-                            <div class="portfolio-mockup-visual bg-grad-<?= e($item['category']) ?>">
-                                <div class="visual-inner">
+                            <?php if (!empty($item['image'])): ?>
+                                <img src="<?= e(ASSETS_URL . '/' . $item['image']) ?>" 
+                                     alt="<?= e($item['title']) ?> • <?= e($item['client']) ?>" 
+                                     class="portfolio-thumb-img" 
+                                     width="640" height="400" loading="lazy">
+                                <div class="portfolio-thumb-overlay">
                                     <span class="mockup-client"><?= e($item['client']) ?></span>
                                     <span class="mockup-year"><?= e($item['date']) ?></span>
                                 </div>
-                            </div>
+                            <?php else: ?>
+                                <div class="portfolio-mockup-visual bg-grad-<?= e($item['category']) ?>">
+                                    <div class="visual-inner">
+                                        <span class="mockup-client"><?= e($item['client']) ?></span>
+                                        <span class="mockup-year"><?= e($item['date']) ?></span>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="portfolio-body">
                             <h3 class="portfolio-title"><?= e($item['title']) ?></h3>

@@ -163,9 +163,19 @@ require dirname(__DIR__) . '/layout/header.php';
                 <article class="card portfolio-card">
                     <div class="portfolio-thumb">
                         <div class="portfolio-category-badge"><?= e($item['category_name']) ?></div>
-                        <div class="portfolio-mockup-visual bg-grad-<?= e($item['category']) ?>">
-                            <span class="mockup-client"><?= e($item['client']) ?></span>
-                        </div>
+                        <?php if (!empty($item['image'])): ?>
+                            <img src="<?= e(ASSETS_URL . '/' . $item['image']) ?>" 
+                                 alt="<?= e($item['title']) ?> • <?= e($item['client']) ?>" 
+                                 class="portfolio-thumb-img" 
+                                 width="640" height="400" loading="lazy">
+                            <div class="portfolio-thumb-overlay">
+                                <span class="mockup-client"><?= e($item['client']) ?></span>
+                            </div>
+                        <?php else: ?>
+                            <div class="portfolio-mockup-visual bg-grad-<?= e($item['category']) ?>">
+                                <span class="mockup-client"><?= e($item['client']) ?></span>
+                            </div>
+                        <?php endif; ?>
                     </div>
                     <div class="portfolio-body">
                         <h3 class="portfolio-title"><?= e($item['title']) ?></h3>

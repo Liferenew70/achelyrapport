@@ -187,6 +187,46 @@ require dirname(__DIR__) . '/layout/header.php';
 </section>
 
 <!-- ============================================================== -->
+<!-- LE STUDIO EN ACTION : TOURNAGES RÉELS                          -->
+<!-- ============================================================== -->
+<section class="section bg-alt">
+    <div class="container">
+        <div class="podcast-real-production">
+            <div class="podcast-real-media">
+                <img src="<?= e(ASSETS_URL . '/images/podcast-tv-show.jpg') ?>" alt="Enregistrement émission et podcast au Studio Wiky Holding Abidjan" class="podcast-real-img" loading="lazy">
+                <div class="podcast-real-badge">
+                    <span class="live-dot"></span>
+                    <span>Tournage Réel en Studio • Wiky Holding</span>
+                </div>
+            </div>
+            <div class="podcast-real-content">
+                <span class="badge">Production & Captation 4K</span>
+                <h2 class="section-title">De l'idée au master final prêt pour vos audiences</h2>
+                <p>
+                    Chaque semaine, nos studios accueillent créateurs, chefs d'entreprise et personnalités pour enregistrer des émissions de talk, des podcasts et des capsules courtes optimisées pour les réseaux sociaux.
+                </p>
+                <div class="features-check-grid mt-4">
+                    <div class="check-item">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Cadrage dynamique multi-angles 4K</span>
+                    </div>
+                    <div class="check-item">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Étalonnage cinématographique & sous-titrage dynamique</span>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <a href="<?= e(url('contact')) ?>" class="btn btn--primary">
+                        <span>Réserver une session de test</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================== -->
 <!-- CTA                                                            -->
 <!-- ============================================================== -->
 <section class="cta-banner-section">

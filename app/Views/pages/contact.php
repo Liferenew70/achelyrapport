@@ -94,6 +94,14 @@ require dirname(__DIR__) . '/layout/header.php';
 
             <!-- Coordonnées et localisation -->
             <div class="contact-info-wrapper">
+                <div class="contact-office-card">
+                    <img src="<?= e(ASSETS_URL . '/images/agence-bureaux-abidjan.jpg') ?>" alt="Bureaux Wiky Holding Abidjan" class="contact-office-photo" loading="lazy">
+                    <div class="contact-office-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Siège & Studios • Abidjan, Côte d'Ivoire</span>
+                    </div>
+                </div>
+
                 <div class="card contact-details-card">
                     <h3 class="details-title">Nos Bureaux à Abidjan</h3>
                     <p class="details-desc">Nous vous accueillons du lundi au samedi pour échanger autour de votre stratégie de communication.</p>

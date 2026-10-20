@@ -14,6 +14,7 @@ class ServiceModel
                 'title' => 'Community Management & Modération Active',
                 'category' => 'Réseaux Sociaux',
                 'badge' => 'Essentiel Visibilité',
+                'image' => 'images/service-communication-digitale.jpg',
                 'short_desc' => 'Gestion de votre image sociale, animation quotidienne, modération des avis et réponse chirurgicale aux commentaires 7j/7.',
                 'icon' => 'message-circle',
                 'features' => [
@@ -31,6 +32,7 @@ class ServiceModel
                 'title' => 'Identité Visuelle & Conception de Logos',
                 'category' => 'Design Graphique',
                 'badge' => 'Impact Visuel',
+                'image' => 'images/service-branding-image-marque.jpg',
                 'short_desc' => 'Création de logos distinctifs, chartes graphiques complètes et déclinaisons visuelles mémorables qui imposent votre autorité.',
                 'icon' => 'feather',
                 'features' => [
@@ -48,6 +50,7 @@ class ServiceModel
                 'title' => 'Studio Podcast & Production Audiovisuelle',
                 'category' => 'Média & Audio',
                 'badge' => 'Studio Professionnel',
+                'image' => 'images/studio-podcast-abidjan.jpg',
                 'short_desc' => 'Studio insonorisé et équipé à Abidjan pour tournages de podcasts, capsules vidéo d’entreprise, interviews et voix off de haut standing.',
                 'icon' => 'mic',
                 'features' => [
@@ -65,6 +68,7 @@ class ServiceModel
                 'title' => 'Branding d’Entreprise & Pack Lancement',
                 'category' => 'Stratégie & Conseil',
                 'badge' => 'Pack Entrepreneur',
+                'image' => 'images/visibilite-acquisition-digitale.jpg',
                 'short_desc' => 'Accompagnement stratégique 360° pour nouvelles entreprises : positionnement, naming, création de marque et kit de démarrage commercial.',
                 'icon' => 'compass',
                 'features' => [

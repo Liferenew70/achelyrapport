@@ -47,6 +47,10 @@ require dirname(__DIR__) . '/layout/header.php';
             </div>
 
             <div class="story-card">
+                <div class="about-founder-preview">
+                    <img src="<?= e(ASSETS_URL . '/images/fondateur-wiky.jpg') ?>" alt="Direction Wiky Holding Abidjan" class="about-founder-img" loading="lazy">
+                    <div class="about-founder-badge">Direction Générale & Associés • Wiky Holding Abidjan</div>
+                </div>
                 <div class="card about-manifesto-card">
                     <div class="manifesto-header">
                         <span class="manifesto-tag">Notre Mission</span>
