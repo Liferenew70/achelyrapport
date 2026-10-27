@@ -1,0 +1,406 @@
+[
+  [
+    1,
+    "DÉDICACE"
+  ],
+  [
+    1,
+    "REMERCIEMENTS"
+  ],
+  [
+    1,
+    "AVANT-PROPOS"
+  ],
+  [
+    1,
+    "INTRODUCTION"
+  ],
+  [
+    1,
+    "PREMIÈRE PARTIE : GÉNÉRALITÉS"
+  ],
+  [
+    2,
+    "CHAPITRE I : PRÉSENTATION DE DIGITAL AGENCY WIKY"
+  ],
+  [
+    3,
+    "I. Présentation de Digital Agency Wiky"
+  ],
+  [
+    4,
+    "1. Historique"
+  ],
+  [
+    4,
+    "2. Situation géographique"
+  ],
+  [
+    4,
+    "3. Domaine d’activité"
+  ],
+  [
+    3,
+    "II. Organigramme du groupe Wiky"
+  ],
+  [
+    4,
+    "1. Direction"
+  ],
+  [
+    4,
+    "2. Gestion des projets et relations clients"
+  ],
+  [
+    4,
+    "3. Pôle communication digitale"
+  ],
+  [
+    4,
+    "4. Pôle graphique et création visuelle"
+  ],
+  [
+    4,
+    "5. Pôle audiovisuel et shooting photo"
+  ],
+  [
+    4,
+    "6. Pôle studio podcast"
+  ],
+  [
+    3,
+    "III. Services de l’entreprise"
+  ],
+  [
+    4,
+    "1. Community management"
+  ],
+  [
+    4,
+    "2. Graphisme et identité visuelle"
+  ],
+  [
+    4,
+    "3. Audiovisuel et studio podcast"
+  ],
+  [
+    4,
+    "4. Chargé de projets"
+  ],
+  [
+    2,
+    "CHAPITRE II : PRÉSENTATION DU PROJET"
+  ],
+  [
+    3,
+    "2.1 Contexte du projet"
+  ],
+  [
+    3,
+    "2.2 Problématique"
+  ],
+  [
+    3,
+    "2.3 Objectifs du projet"
+  ],
+  [
+    4,
+    "Objectif général"
+  ],
+  [
+    4,
+    "Objectifs spécifiques"
+  ],
+  [
+    3,
+    "2.4 Cahier des charges"
+  ],
+  [
+    4,
+    "Besoins fonctionnels"
+  ],
+  [
+    4,
+    "Besoins non fonctionnels"
+  ],
+  [
+    3,
+    "2.5 Méthodologie de travail"
+  ],
+  [
+    3,
+    "2.6 Pourquoi ne pas utiliser un framework"
+  ],
+  [
+    1,
+    "DEUXIÈME PARTIE : RÉALISATION DU SITE WEB"
+  ],
+  [
+    2,
+    "CHAPITRE I : ANALYSE ET CONCEPTION"
+  ],
+  [
+    3,
+    "3.1 Analyse des besoins"
+  ],
+  [
+    3,
+    "3.2 Arborescence du site"
+  ],
+  [
+    3,
+    "3.3 Charte graphique"
+  ],
+  [
+    4,
+    "Les couleurs"
+  ],
+  [
+    4,
+    "Les polices"
+  ],
+  [
+    4,
+    "Les thèmes"
+  ],
+  [
+    2,
+    "CHAPITRE II : ENVIRONNEMENT TECHNIQUE"
+  ],
+  [
+    3,
+    "4.1 Langages utilisés"
+  ],
+  [
+    3,
+    "4.2 Base de données"
+  ],
+  [
+    3,
+    "4.3 Outils de développement"
+  ],
+  [
+    3,
+    "4.4 Hébergement"
+  ],
+  [
+    2,
+    "CHAPITRE III : ARCHITECTURE DU SITE"
+  ],
+  [
+    3,
+    "5.1 Le modèle MVC"
+  ],
+  [
+    3,
+    "5.2 Les dossiers du projet"
+  ],
+  [
+    3,
+    "5.3 Le fichier index.php"
+  ],
+  [
+    3,
+    "5.4 Le dossier app/Config"
+  ],
+  [
+    3,
+    "5.5 Le dossier app/Controllers"
+  ],
+  [
+    3,
+    "5.6 Le dossier app/Models"
+  ],
+  [
+    3,
+    "5.7 Le dossier app/Views"
+  ],
+  [
+    3,
+    "5.8 Le dossier assets"
+  ],
+  [
+    3,
+    "5.9 Les fichiers à la racine"
+  ],
+  [
+    3,
+    "5.10 Les routes du site"
+  ],
+  [
+    3,
+    "5.11 Exemple : l’envoi d’un message de contact"
+  ],
+  [
+    2,
+    "CHAPITRE IV : BASE DE DONNÉES"
+  ],
+  [
+    3,
+    "6.1 La classe Database"
+  ],
+  [
+    3,
+    "6.2 Les tables"
+  ],
+  [
+    4,
+    "Table messages (formulaire de contact)"
+  ],
+  [
+    4,
+    "Table devis_requests (demandes de devis)"
+  ],
+  [
+    2,
+    "CHAPITRE V : PRÉSENTATION DES PAGES DU SITE"
+  ],
+  [
+    3,
+    "7.1 La page d’accueil"
+  ],
+  [
+    3,
+    "7.2 La page À propos"
+  ],
+  [
+    3,
+    "7.3 La page Services"
+  ],
+  [
+    3,
+    "7.4 La page Réalisations"
+  ],
+  [
+    3,
+    "7.5 La page Studio podcast"
+  ],
+  [
+    3,
+    "7.6 La page Contact"
+  ],
+  [
+    3,
+    "7.7 La page Devis"
+  ],
+  [
+    2,
+    "CHAPITRE VI : FONCTIONNALITÉS DU SITE"
+  ],
+  [
+    3,
+    "8.1 Le simulateur de devis"
+  ],
+  [
+    3,
+    "8.2 La recherche instantanée"
+  ],
+  [
+    3,
+    "8.3 Les thèmes et les couleurs"
+  ],
+  [
+    3,
+    "8.4 Le filtre des réalisations"
+  ],
+  [
+    3,
+    "8.5 La barre de navigation et le bouton de retour en haut"
+  ],
+  [
+    3,
+    "8.6 L’affichage sur mobile"
+  ],
+  [
+    2,
+    "CHAPITRE VII : SÉCURITÉ DU SITE"
+  ],
+  [
+    3,
+    "9.1 Protection contre les injections SQL"
+  ],
+  [
+    3,
+    "9.2 Protection contre les attaques CSRF"
+  ],
+  [
+    3,
+    "9.3 Protection contre les attaques XSS"
+  ],
+  [
+    3,
+    "9.4 Validation des données"
+  ],
+  [
+    3,
+    "9.5 Protection du serveur avec .htaccess"
+  ],
+  [
+    2,
+    "CHAPITRE VIII : TESTS ET DÉBOGAGE"
+  ],
+  [
+    3,
+    "10.1 Les tests effectués"
+  ],
+  [
+    3,
+    "10.2 Problèmes rencontrés et corrections"
+  ],
+  [
+    2,
+    "CHAPITRE IX : MISE EN LIGNE ET COÛT"
+  ],
+  [
+    3,
+    "11.1 Test en local avec WAMP"
+  ],
+  [
+    3,
+    "11.2 Mise en ligne sur InfinityFree"
+  ],
+  [
+    3,
+    "11.3 Coût de réalisation"
+  ],
+  [
+    2,
+    "APPORTS, DIFFICULTÉS ET PERSPECTIVES"
+  ],
+  [
+    3,
+    "12.1 Ce que ce stage m’a apporté"
+  ],
+  [
+    3,
+    "12.2 Les difficultés"
+  ],
+  [
+    3,
+    "12.3 Perspectives d’amélioration"
+  ],
+  [
+    1,
+    "CONCLUSION"
+  ],
+  [
+    1,
+    "ANNEXES"
+  ],
+  [
+    3,
+    "Annexe 1 : Exemple de requête préparée (principe)"
+  ],
+  [
+    3,
+    "Annexe 2 : Jeton CSRF (principe)"
+  ],
+  [
+    3,
+    "Annexe 3 : Configuration de la base MySQL"
+  ],
+  [
+    3,
+    "Annexe 4 : Technologies utilisées"
+  ]
+]
